@@ -2,13 +2,13 @@
   <div class="mt-5 card-margin row">
     <div
         class="card mr-1 "
-        style="width: 177px; height:270px;"
+        style="width: 177px; height:240px;"
         v-for="personagem of exibir"
         :key="personagem.id"
       >
-        <img class="card-img-top image" :src="personagem.picture">
+        <img class="card-img-top image rounded" :src="personagem.picture">
         <div class="card-body">
-          <h5 class="text-center text-decoration-none">{{personagem.name}}</h5>
+          <h6 class="text-center text-decoration-none">{{personagem.name}}</h6>
         </div>
       </div>
     <div class="text-area-div" v-for="personagem of exibir"

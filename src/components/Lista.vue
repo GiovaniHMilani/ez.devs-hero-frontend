@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div id="custom-search-input" class="mt-5">
+  <div class="ml-1">
+    <div id="custom-search-input" class="mt-5 mr-4">
       <div class="input-group col-md-12">
         <input
           type="text"
@@ -13,14 +13,15 @@
     </div>
     <div class="row mt-5">
       <div
-        class="card mr-1 mb-2"
-        style="width: 177px;"
+        class="card mr-1 mb-5"
+        style="width: 177px; height:240px;"
         v-for="personagem of exibir"
         :key="personagem.id"
       >
-        <img class="card-img-top image" :src="personagem.picture">
+      <router-link tag="a" :to="{ path:`/personagem/${personagem.name}`}" > <img class="card-img-top image rounded" :to="{ path:`/personagem/${personagem.name}`}" :src="personagem.picture"></router-link >
+       
         <div class="card-body">
-          <router-link class="text-center text-decoration-none" tag="h6" :to="{ path:`/personagem/${personagem.name}`}" >{{personagem.name}}</router-link >
+          <router-link class="text-center text-decoration-none cursor" tag="h6" :to="{ path:`/personagem/${personagem.name}`}" >{{personagem.name}}</router-link >
         </div>
       </div>
     </div>
@@ -69,5 +70,8 @@ export default {
   height: 175px;
   object-fit: cover;
   object-position: center;
+}
+.cursor {
+  cursor:pointer;
 }
 </style>
