@@ -42,7 +42,6 @@ export default {
         }
       }
       this.exibir = novalista;
-      console.log(this.$route.params.name)
     });
   },
   data() {
