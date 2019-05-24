@@ -35,7 +35,7 @@ export default {
   mounted() {
     personagem.getAllPersona().then(resposta => {
       this.personagens = resposta.data;
-      this.exibir = this.personagens;
+      this.exibir = this.personagens.sort();
     });
   },
   data() {
@@ -57,7 +57,7 @@ export default {
             });
           }
         }
-        this.exibir = novalista;
+        this.exibir = novalista.sort();
       }
     };
   }
