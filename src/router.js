@@ -18,8 +18,7 @@ export default new Router({
       path: '/personagem/:name',
       name: 'Personagem',
       component: Personagem,
-      props: true,
-      params: true
+      props: true
     }
     
   ]
